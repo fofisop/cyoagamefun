@@ -76,8 +76,28 @@ screen = 1;
 }
 if(screen == 1){
   if(a1Button.mouse.presses()){
-    background.color = "palegreen";
-    
+    background.color = ("palegreen");
+     text(
+    "Welcome to screen 2. Make your second choice.",
+    width / 2,
+    height / 2 - 100
+  );
+  a1Button.pos = { x: -200, y: -200 };
+     a2Button.pos = { x: -50, y: -50 };
+
+  b1Button.pos = { x: width / 2 - 50, y: height / 2 + 100 };
+     b1Button.w = 50;
+     b1Button.h = 50;
+     b1Button.collider = "k";
+     b1Button.color = "plum";
+     b1Button.text = "B1";
+
+      b2Button.pos = { x: width / 2 + 50, y: height / 2 + 100 };
+       b2Button.collider = "k";
+     b2Button.color = "plum";
+     b2Button.text = "B2";
+     b2Button.w = 50;
+     b2Button.h = 50;
     screen = 2;
 
   }else if(a2Button.mouse.presses()){
