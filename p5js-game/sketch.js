@@ -49,7 +49,28 @@ enterButton.text = "Enter"
 if(enterButton.mouse.presses())
 {
   print("Pressed");
-  background("paleturquoise")
+showScreen1();
+screen = 1;
+
+}
+if(screen == 1){
+  if(a1Button.mouse.presses()){
+ showScreen2();
+
+    screen = 2;
+
+  }else if(a2Button.mouse.presses()){
+    showScreen5();
+
+     screen = 5;
+}
+}
+print("Display screen 2")}
+
+/* FUNCTIONS TO DISPLAY SCREENS */
+
+function showScreen1(){
+background("paleturquoise")
   text("Welcome to screen 1. Make your first choice.",
   width/2,
   height/2 -100);
@@ -71,12 +92,9 @@ a2Button.h = 50;
 a2Button.collider = "k";
 a2Button.color = "plum";
 a2Button.text = "a2"
-screen = 1;
-
 }
-if(screen == 1){
-  if(a1Button.mouse.presses()){
-    background.color = ("palegreen");
+function showScreen2(){
+   background("palegreen");
      text(
     "Welcome to screen 2. Make your second choice.",
     width / 2,
@@ -98,15 +116,24 @@ if(screen == 1){
      b2Button.text = "B2";
      b2Button.w = 50;
      b2Button.h = 50;
-    screen = 2;
-
-  }else if(a2Button.mouse.presses()){
-    screen = 5;
-
-  }
 }
+function showScreen3(){
+   background("lavender");
+     text("You hit an end point at Screen 3.", width / 2, height / 2 - 100);
+     b1Button.pos = { x: -100, y: -100}
+     b2Button.pos = {x: -150, y: -150  }
 
-print("Display screen 2")}
-
-/* FUNCTIONS TO DISPLAY SCREENS */
-
+}
+function showScreen4(){
+   background("plum");
+     text("You hit an end point at Screen 4.", width / 2, height / 2 - 100);
+     b1Button.pos = { x: -100, y: -100}
+     b2Button.pos = {x: -150, y: -150  }
+}
+function showScreen5(){
+ background("palegreen");
+     text("You hit an end point at Screen 5.", width / 2, height / 2 - 100);
+  
+   a1Button.pos = { x: -200, y: -200 };
+     a2Button.pos = { x: -50, y: -50 };
+}
