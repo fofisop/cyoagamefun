@@ -5,6 +5,10 @@ let a2Button;
 let b1Button;
 let b2Button;
 let screen = 0;
+let bgColor = "black";
+let dramaColor = "#C62121";
+let btnColor = "#996C6E";
+let textColor = btnColor;
 
 /* SETUP RUNS ONCE */
 function setup() {
@@ -14,12 +18,16 @@ function setup() {
   noStroke();
 
   // Set up the home screen
-  background("pink");
+  background(bgColor);
+  
   text(
     "Welcome to screen 0. This is the home screen.",
+    
     width / 2,
     height / 2 - 100
-  );
+  
+);``
+showShapes();
 
   // Create buttons for all screens
 enterButton = new Sprite (width/2, height/2 +100);
@@ -39,7 +47,7 @@ function draw() {
 enterButton.w = 100;
 enterButton.h = 50;
 enterButton.collider = "k";
-enterButton.color = "plum";
+enterButton.color = btnColor;
 enterButton.text = "Enter"
 ;
 
@@ -56,21 +64,29 @@ screen = 1;
 if(screen == 1){
   if(a1Button.mouse.presses()){
  showScreen2();
-
     screen = 2;
-
   }else if(a2Button.mouse.presses()){
     showScreen5();
-
      screen = 5;
 }
+}else if(screen == 2) {
+
+  if (b1Button.mouse.presses()){
+    showScreen3();
+    screen = 3;
+  
+  }else if (b2Button.mouse.presses()){
+    showScreen4();
+    screen = 4;
+
+  }
 }
 print("Display screen 2")}
 
 /* FUNCTIONS TO DISPLAY SCREENS */
 
 function showScreen1(){
-background("paleturquoise")
+background(bgColor)
   text("Welcome to screen 1. Make your first choice.",
   width/2,
   height/2 -100);
@@ -81,7 +97,7 @@ background("paleturquoise")
   a1Button.w = 50;
   a1Button.h = 50;
   a1Button.collider = "k";
-  a1Button.color = "plum";
+  a1Button.color = btnColor;
   a1Button.text = "A1"
 
 
@@ -90,11 +106,11 @@ background("paleturquoise")
 a2Button.w = 50;
 a2Button.h = 50;
 a2Button.collider = "k";
-a2Button.color = "plum";
+a2Button.color = btnColor;
 a2Button.text = "a2"
 }
 function showScreen2(){
-   background("palegreen");
+   background(bgColor);
      text(
     "Welcome to screen 2. Make your second choice.",
     width / 2,
@@ -107,33 +123,53 @@ function showScreen2(){
      b1Button.w = 50;
      b1Button.h = 50;
      b1Button.collider = "k";
-     b1Button.color = "plum";
+     b1Button.color = btnColor;
      b1Button.text = "B1";
 
       b2Button.pos = { x: width / 2 + 50, y: height / 2 + 100 };
        b2Button.collider = "k";
-     b2Button.color = "plum";
+     b2Button.color = btnColor;
      b2Button.text = "B2";
      b2Button.w = 50;
      b2Button.h = 50;
 }
 function showScreen3(){
-   background("lavender");
+   background(bgColor);
      text("You hit an end point at Screen 3.", width / 2, height / 2 - 100);
      b1Button.pos = { x: -100, y: -100}
-     b2Button.pos = {x: -150, y: -150  }
+     b2Button.pos = {x: -150, y: -150 }
 
 }
 function showScreen4(){
-   background("plum");
+   background(dramaColor);
      text("You hit an end point at Screen 4.", width / 2, height / 2 - 100);
      b1Button.pos = { x: -100, y: -100}
-     b2Button.pos = {x: -150, y: -150  }
+     b2Button.pos = {x: -150, y: -150 }
 }
 function showScreen5(){
- background("palegreen");
+ background(dramaColor);
      text("You hit an end point at Screen 5.", width / 2, height / 2 - 100);
   
    a1Button.pos = { x: -200, y: -200 };
      a2Button.pos = { x: -50, y: -50 };
+}
+function showShapes(){
+   translate(width / 2, height / 2); 
+  noFill();
+  stroke(230, 160, 40); 
+  strokeWeight(8);
+  circle(0, 0, 240);
+  strokeWeight(6);
+  line(120, -120, -120, 120);
+  fill("#F5B937");
+  noStroke();
+  triangle(-130, 130, -110, 100, -100, 110);
+  circle(-35, 25, 25); 
+triangle(-42, 18, -30, 32, -60, 45);
+ circle(-5, -5, 50);
+ triangle(-5, -30, 75, -60, 15, -5); 
+ triangle(-25, 5, -75, -75, -15, -15); 
+
+
+
 }
