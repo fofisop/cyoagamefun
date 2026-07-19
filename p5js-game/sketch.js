@@ -19,12 +19,12 @@ function setup() {
 
   // Set up the home screen
   background(bgColor);
-  
+  fill (textColor);
   text(
     "Welcome to screen 0. This is the home screen.",
     
     width / 2,
-    height / 2 - 100
+    height / 2 - 150
   
 );``
 showShapes();
@@ -63,7 +63,8 @@ screen = 1;
 }
 if(screen == 1){
   if(a1Button.mouse.presses()){
- showScreen2();
+    showScreen2();
+      
     screen = 2;
   }else if(a2Button.mouse.presses()){
     showScreen5();
@@ -89,7 +90,7 @@ function showScreen1(){
 background(bgColor)
   text("Welcome to screen 1. Make your first choice.",
   width/2,
-  height/2 -100);
+  height/2 -150);
   enterButton.pos= {x:-100, y: -100};
 
     // Add A1 button
@@ -108,14 +109,20 @@ a2Button.h = 50;
 a2Button.collider = "k";
 a2Button.color = btnColor;
 a2Button.text = "a2"
+
+showShapes();
 }
 function showScreen2(){
+  
    background(bgColor);
      text(
     "Welcome to screen 2. Make your second choice.",
     width / 2,
-    height / 2 - 100
+    height / 2 - 150
   );
+  
+  showShapes();
+  
   a1Button.pos = { x: -200, y: -200 };
      a2Button.pos = { x: -50, y: -50 };
 
@@ -132,17 +139,21 @@ function showScreen2(){
      b2Button.text = "B2";
      b2Button.w = 50;
      b2Button.h = 50;
+     showShapes();
 }
 function showScreen3(){
+  
    background(bgColor);
-     text("You hit an end point at Screen 3.", width / 2, height / 2 - 100);
+     text("You hit an end point at Screen 3.", width / 2, height / 2 - 150);
+     showShapes();
      b1Button.pos = { x: -100, y: -100}
      b2Button.pos = {x: -150, y: -150 }
-
+showShapes();
 }
 function showScreen4(){
    background(dramaColor);
-     text("You hit an end point at Screen 4.", width / 2, height / 2 - 100);
+     text("You hit an end point at Screen 4.", width / 2, height / 2 - 150);
+     
      b1Button.pos = { x: -100, y: -100}
      b2Button.pos = {x: -150, y: -150 }
 }
@@ -168,8 +179,5 @@ function showShapes(){
 triangle(-42, 18, -30, 32, -60, 45);
  circle(-5, -5, 50);
  triangle(-5, -30, 75, -60, 15, -5); 
- triangle(-25, 5, -75, -75, -15, -15); 
-
-
-
+ triangle(-25, 5, -75, -75, -15, -15);
 }
