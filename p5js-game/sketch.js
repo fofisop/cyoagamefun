@@ -7,8 +7,9 @@ let b2Button;
 let screen = 0;
 let bgColor = "black";
 let dramaColor = "#C62121";
-let btnColor = "#996C6E";
+let btnColor = "#4f4537";
 let textColor = btnColor;
+let btnTextColor = "#F5B937";
 
 /* SETUP RUNS ONCE */
 function setup() {
@@ -21,12 +22,14 @@ function setup() {
   background(bgColor);
   fill (textColor);
   text(
-    "Welcome to screen 0. This is the home screen.",
+    "Welcome to the Virtual (and short) Hunger Games! Make decisions, and discover your fate... you can't back out now!",
     
-    width / 2,
-    height / 2 - 150
+    
+    width / 2 -300,
+    height / 2 - 200,600
   
-);``
+);
+ ``
 showShapes();
 
   // Create buttons for all screens
@@ -43,12 +46,13 @@ b2Button = new Sprite (-150,-150);
 /* DRAW LOOP REPEATS */
 function draw() {
   // Display enter button
-
+   fill("#F5B937");
 enterButton.w = 100;
 enterButton.h = 50;
 enterButton.collider = "k";
 enterButton.color = btnColor;
 enterButton.text = "Enter"
+enterButton.textColor = btnTextColor;
 ;
 
 
@@ -89,8 +93,8 @@ print("Display screen 2")}
 function showScreen1(){
 background(bgColor)
   text("Welcome to screen 1. Make your first choice.",
-  width/2,
-  height/2 -150);
+  width / 2 -300,
+    height / 2 - 200,600);
   enterButton.pos= {x:-100, y: -100};
 
     // Add A1 button
@@ -100,6 +104,7 @@ background(bgColor)
   a1Button.collider = "k";
   a1Button.color = btnColor;
   a1Button.text = "A1"
+  a1Button.textColor = btnTextColor;
 
 
   // Add A2 button
@@ -109,6 +114,7 @@ a2Button.h = 50;
 a2Button.collider = "k";
 a2Button.color = btnColor;
 a2Button.text = "a2"
+a2Button.textColor = btnTextColor;
 
 showShapes();
 }
@@ -117,8 +123,8 @@ function showScreen2(){
    background(bgColor);
      text(
     "Welcome to screen 2. Make your second choice.",
-    width / 2,
-    height / 2 - 150
+    width / 2 -300,
+    height / 2 - 200,600
   );
   
   showShapes();
@@ -132,6 +138,7 @@ function showScreen2(){
      b1Button.collider = "k";
      b1Button.color = btnColor;
      b1Button.text = "B1";
+     b1Button.textColor = btnTextColor;
 
       b2Button.pos = { x: width / 2 + 50, y: height / 2 + 100 };
        b2Button.collider = "k";
@@ -139,12 +146,14 @@ function showScreen2(){
      b2Button.text = "B2";
      b2Button.w = 50;
      b2Button.h = 50;
+     b2Button.textColor = btnTextColor;
      showShapes();
 }
 function showScreen3(){
   
    background(bgColor);
-     text("You hit an end point at Screen 3.", width / 2, height / 2 - 150);
+     text("You hit an end point at Screen 3.", width / 2 -300,
+    height / 2 - 200,600);
      showShapes();
      b1Button.pos = { x: -100, y: -100}
      b2Button.pos = {x: -150, y: -150 }
@@ -152,19 +161,22 @@ showShapes();
 }
 function showScreen4(){
    background(dramaColor);
-     text("You hit an end point at Screen 4.", width / 2, height / 2 - 150);
+     text("You hit an end point at Screen 4.", width / 2 -300,
+    height / 2 - 200,600);
      
      b1Button.pos = { x: -100, y: -100}
      b2Button.pos = {x: -150, y: -150 }
 }
 function showScreen5(){
  background(dramaColor);
-     text("You hit an end point at Screen 5.", width / 2, height / 2 - 100);
+     text("You hit an end point at Screen 5.", width / 2 -300,
+    height / 2 - 200,600);
   
    a1Button.pos = { x: -200, y: -200 };
      a2Button.pos = { x: -50, y: -50 };
 }
 function showShapes(){
+  push();
    translate(width / 2, height / 2); 
   noFill();
   stroke(230, 160, 40); 
@@ -180,4 +192,5 @@ triangle(-42, 18, -30, 32, -60, 45);
  circle(-5, -5, 50);
  triangle(-5, -30, 75, -60, 15, -5); 
  triangle(-25, 5, -75, -75, -15, -15);
+ pop();
 }
