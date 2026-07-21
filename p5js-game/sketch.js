@@ -92,28 +92,29 @@ print("Display screen 2")}
 
 function showScreen1(){
 background(bgColor)
-  text("Welcome to screen 1. Make your first choice.",
-  width / 2 -300,
+  text("The game begins in 3... 2... 1! Lots off players run to the cornucopia to get supplies. Do you risk it and join them, or run in the opposite direction?",
+    width / 2 -300,
     height / 2 - 200,600);
   enterButton.pos= {x:-100, y: -100};
 
     // Add A1 button
-  a1Button.pos = {x: width/2-50, y: height/2 +100};
-  a1Button.w = 50;
+  a1Button.pos = {x: width/2-140, y: height/2 +100};
+  a1Button.w = 200;
   a1Button.h = 50;
   a1Button.collider = "k";
   a1Button.color = btnColor;
-  a1Button.text = "A1"
+  a1Button.text = "Run behind you"
   a1Button.textColor = btnTextColor;
+  
 
 
   // Add A2 button
-  a2Button.pos = {x: width/2+50, y: height/2 +100};
-a2Button.w = 50;
+  a2Button.pos = {x: width/2+140, y: height/2 +100};
+a2Button.w = 200;
 a2Button.h = 50;
 a2Button.collider = "k";
 a2Button.color = btnColor;
-a2Button.text = "a2"
+a2Button.text = "Run to the cornucopia"
 a2Button.textColor = btnTextColor;
 
 showShapes();
@@ -122,7 +123,7 @@ function showScreen2(){
   
    background(bgColor);
      text(
-    "Welcome to screen 2. Make your second choice.",
+    "You escape into the woods safely but have zero supplies. You spot a strange metal container half-buried in the mud, but suddenly hear rustling leaves nearby",
     width / 2 -300,
     height / 2 - 200,600
   );
@@ -132,19 +133,19 @@ function showScreen2(){
   a1Button.pos = { x: -200, y: -200 };
      a2Button.pos = { x: -50, y: -50 };
 
-  b1Button.pos = { x: width / 2 - 50, y: height / 2 + 100 };
-     b1Button.w = 50;
+  b1Button.pos = { x: width / 2 - 140, y: height / 2 + 100 };
+     b1Button.w = 200;
      b1Button.h = 50;
      b1Button.collider = "k";
      b1Button.color = btnColor;
-     b1Button.text = "B1";
+     b1Button.text = "Open the metal box";
      b1Button.textColor = btnTextColor;
 
-      b2Button.pos = { x: width / 2 + 50, y: height / 2 + 100 };
+      b2Button.pos = { x: width / 2 + 140, y: height / 2 + 100 };
        b2Button.collider = "k";
      b2Button.color = btnColor;
-     b2Button.text = "B2";
-     b2Button.w = 50;
+     b2Button.text = "Hide in the bushes";
+     b2Button.w = 200;
      b2Button.h = 50;
      b2Button.textColor = btnTextColor;
      showShapes();
@@ -152,7 +153,7 @@ function showScreen2(){
 function showScreen3(){
   
    background(bgColor);
-     text("You hit an end point at Screen 3.", width / 2 -300,
+     text("Inside the metal container lies a perfect kit of weapons, food, a bow, and almost everything you need for a smoother game. You use your strategic thinking and these tools to become a victor!", width / 2 -300,
     height / 2 - 200,600);
      showShapes();
      b1Button.pos = { x: -100, y: -100}
@@ -161,7 +162,7 @@ showShapes();
 }
 function showScreen4(){
    background(dramaColor);
-     text("You hit an end point at Screen 4.", width / 2 -300,
+     text("You hide in the bushes, but not quickly enough. You get hit by an arrow and another player takes the metal container and goes on to win the games.", width / 2 -300,
     height / 2 - 200,600);
      
      b1Button.pos = { x: -100, y: -100}
@@ -169,7 +170,7 @@ function showScreen4(){
 }
 function showScreen5(){
  background(dramaColor);
-     text("You hit an end point at Screen 5.", width / 2 -300,
+     text("You stepped directly into the bloodbath at the cornucopia. Before you could grab a backpack, a pocket knife ended your games. GAME OVER.", width / 2 -300,
     height / 2 - 200,600);
   
    a1Button.pos = { x: -200, y: -200 };
