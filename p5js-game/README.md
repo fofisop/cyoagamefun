@@ -1,1 +1,1 @@
-I used a bit of starter code from an online tutorial to help me out!
+I used a bit of starter code from an online tutorial to help me out! Me and a group of friends each decided to create a project with the help of the tutorial, and see what the results are! This is quite a simple game, but it was my first time using p5js play, so that was cool. I struggled greatly with the shape of the mockingjay, but I think it looks ok now. Learning was push and pop commands are really helped me. Credits to "The Hunger Games". Use this by clicking on the buttons and choosing your fate.
